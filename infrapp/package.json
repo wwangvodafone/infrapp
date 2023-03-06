@@ -1,0 +1,47 @@
+{
+  "name": "uhk-infrared",
+  "version": "1.0.0",
+  "description": "Infrared application",
+  "author": "uhk",
+  "license": "ISC",
+  "main": "src/electron-starter.js",
+  "devDependencies": {
+    "electron": "^7.1.7",
+    "foreman": "^2.0.0",
+    "react-scripts": "^1.0.14"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap": "^3.4.1",
+    "echarts": "^4.6.0",
+    "echarts-for-react": "^2.0.15-beta.1",
+    "react": "^16.12.0",
+    "react-bootstrap": "^0.32.4",
+    "react-desktop": "^0.3.9",
+    "react-dom": "^16.12.0",
+    "react-new-window": "^0.1.2",
+    "reactjs-popup": "^1.5.0",
+    "reactstrap": "^6.5.0",
+    "rsuite": "^3.8.13",
+    "web3": "^0.20.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "electron": "electron .",
+    "dev": "nf start -p 3002"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

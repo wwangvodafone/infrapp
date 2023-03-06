@@ -1,0 +1,197 @@
+body {
+  font-family:  BlinkMacSystemFont, sans-serif;
+  background-color: white;
+}
+div.auto {
+  min-width:800px;
+  margin-left:30px;
+  overflow:hidden;
+}
+div.relative {
+  position: relative;
+  top: 50px;
+  right: 300px;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+table.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.color {
+  color: red;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #3CBC8D;
+  color: white;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 20px;
+}
+.container {
+  border-radius: 5px;
+
+  padding: 20px;
+}
+
+.col-5 {
+  float: left;
+  width: 5%;
+  margin-top: 6px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.col-15 {
+  float: left;
+  width: 15%;
+  margin-top: 6px;
+}
+
+.col-85 {
+  float: left;
+  width: 85%;
+  margin-top: 6px;
+}
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+p.outset {border-style: outset;}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.comboxbox {
+	position: relative;
+	border-radius: 2px;
+  border-radius: 50px;
+	background: #da3c41;
+}
+.comboxbox::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.8em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 16px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #ffffff;
+	pointer-events: none;
+}
+.comboxbox select {
+	padding: 8px 38px 8px 8px;
+	color: #000000;
+}
+
+textarea {
+    background:#fffade;
+    border: none;
+    width: 100%;
+    height: 200px;
+}
+.left_click{
+    padding: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(135deg);
+}
+.right_click{
+    padding: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.inner
+{
+    display: inline-block;
+}
