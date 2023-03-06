@@ -1,0 +1,35 @@
+var express = require("express");
+const bodyParser = require("body-parser");
+const cors = require('cors');
+var app = express();
+app.use(cors({
+    origin: 'http://133.18.23.48:3000', //アクセス許可するオリジン
+    credentials: true, //レスポンスヘッダーにAccess-Control-Allow-Credentials追加
+    optionsSuccessStatus: 200 //レスポンスstatusを200に設定
+}))
+app.use(bodyParser.json());
+app.post('/question', (req, res) => {
+    const message = req.body;
+    console.log(message.question)
+    const { Configuration, OpenAIApi } = require("openai");
+
+    const configuration = new Configuration({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+    const openai = new OpenAIApi(configuration);
+    var answer
+    (async () => {
+      const completion = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: message.question }],
+     });
+     answer = completion.data.choices[0].message
+     console.log(answer);
+     res.json({"result": answer});
+    })();
+
+});
+
+app.listen(3003, function() {
+    console.log('App running on port 3003');
+});
